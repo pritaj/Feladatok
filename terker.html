@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+           height: 100VH;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           justify-content: center;
+        }
+
+        .header{
+            background-color: rgb(2, 75, 148);
+            color: white;
+            width: 100%;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: 1px solid rgb(2, 75, 148) ;
+        }
+
+
+        .buttom{
+            width: 158px;
+            
+        }
+        .buttom2{
+            width: 170px;
+            
+        }
+       
+        .mezo:focus{
+                border: none;
+                outline: none;
+            }
+        .eredmeny{
+            width: 150px;
+        }
+    </style>
+    <div class='sikidom' name='negyzet'>
+        <div class="header">
+            <h4> Négyzet </h4>
+        </div>
+       
+        <span>Bekért szám: </span>
+        <div class="bekertszam">
+            <input id="bekertszam" class="eredmeny" name='a' size=5> cm <br>
+        </div>
+       
+    
+        <span> </span>  
+
+        <input type=button class="buttom" value='Számol' onclick=' szamol(); '>
+
+        <hr>
+
+        <b>Eredmények:</b><br>
+     
+                             
+        <p id="kereredmeny"></p>
+       
+        <p id="tereredmeny"></p>
+        
+        <br>
+        <hr>
+
+        <div class="header">
+            <h4> Téglalap </h4>
+        </div>
+       
+        <span>Bekért szám: </span>
+        <div class="bekertszam2">
+            <input id="bekertszam2" class="eredmeny2"> cm <br>
+            <input id="bekertsza" class="eredmeny2"> cm <br>
+        </div>
+        <span> </span>  
+
+        <input type=button class="buttom2" value='Számol' onclick=' szamol2(); '>
+
+        <hr>
+
+        <b>Eredmények:</b><br>
+     
+                             
+        <p id="kereredmeny2"></p>
+       
+        <p id="tereredmeny2"></p>
+
+        <br>
+
+
+
+        
+    
+    
+    </form>
+    
+    <script>
+    
+        function szamol(){
+    
+        let a = (+document.getElementById("bekertszam").value);
+        console.log(a,typeof(a))
+
+        let K = a*a;
+        let T = 4*a;
+            
+         document.getElementById("kereredmeny2").innerHTML = "Kerülete: "+K2
+         document.getElementById("tereredmeny2").innerHTML = "Területe: "+T2
+        
+    
+        }
+
+        function szamol2(){
+    
+    let a = (+document.getElementById("bekertszam2").value);
+    console.log(a,typeof(a))
+
+    let b = (+document.getElementById("bekertsza").value);
+    console.log(b,typeof(b))
+
+
+    let K2 = 2*(b+a);
+    let T2 = b*a;
+        
+     document.getElementById("kereredmeny2").innerHTML = "Kerülete: "+K2
+     document.getElementById("tereredmeny2").innerHTML = "Területe: "+T2
+    
+
+    }
+
+
+
+    
+    </script>
+
+
+
+
+
+</body>
+</html>
